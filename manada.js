@@ -1,6 +1,5 @@
 //Classe Animal
 function Animal(nome) {
-    this.nome = nome || 'Sem nome';
 }
 //barulho qualquer
 Animal.prototype.printBarulho = function () {
@@ -55,7 +54,7 @@ function ManadaVirgula() {
         var animaisVirgula = "";
         for (var i = 0; i < this.animais.lenght; i++) {
             if (i + 1 != this.animais.length) {
-                animaisVirgula = animaisVirgula + this.animais[i] +", ";  
+                animaisVirgula = animaisVirgula + this.animais[i] +", ";
             } else {
                 animaisVirgula = animaisVirgula + this.animais[i];
             }
@@ -69,8 +68,8 @@ ManadaVirgula.prototype = new Manada();
 ManadaSustenidaDupla.prototype = new Manada();
 
 var animal = new Animal();
-var Gato = new Gato("Mia");
-var Cachorro = new Cachorro("Late");
+var Gato = new Gato();
+var Cachorro = new Cachorro();
 
 var manadaVirgula = new ManadaVirgula();
 manadaVirgula.adicionandoAnimal(Cachorro.nome);
