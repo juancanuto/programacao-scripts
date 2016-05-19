@@ -1,0 +1,53 @@
+<html ng-app>
+<head>
+	<title>Escala</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+				
+					<ul class="nav navbar-nav navbar">
+						<td class="actions">
+						<a class="btn btn-success btn-xs" href="template.html">Entrar</a>
+					</ul>
+			</nav>
+
+<div class="container">
+	<div class="row" id="formularios">
+		<form id="form-categoria" action="#" role="form">
+		<fieldset id="fieldset">
+			<div id="dia-group"class="form-group">
+				<label for ="inputDia">Dia </label>
+				<input name="dia" class="form-control" id="inputDia" type="text" placeholder="Dia de trabalho">
+				<span id="dia-help" class="help-block"></span>
+			</div>
+
+			<div id="funcionario-group" class="form-group">
+			<label for="inputFuncionario">Funcionario</label>
+			<input name="funcionario" class="form-control" id="inputFuncionario" type="text" placeholder="Nome do Funcionario">
+				<span id="funcionario-help" class="help-block"></span>
+			</div>
+
+			<button ng-click="count = count + 1" ng-init="count=0" type="submit" class="btn btn-primary" id="enviar" >Cadastrar</button>
+			<span>
+  			Numero de itens inseridos: {{count}}
+			</span>
+		</fieldset>
+		 <img id="salva-loader" src="./image/loader.gif"/> 
+		</form>
+		<div ng-bind="inputDia"></div>
+		<h2>Escala</h2>
+			<ol id="lista-categorias">
+			</ol>
+		<ul class="list-group" id="listaGrupo">
+		</ul>
+
+	</div>
+</div>
+
+</body>
+</html>
